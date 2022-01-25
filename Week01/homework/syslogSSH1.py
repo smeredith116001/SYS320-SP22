@@ -4,7 +4,7 @@ import importlib
 importlib.reload(SyslogCheck1)
 
 
-def ssh_fail(filename, searchTerms):
+def ssh_auth(filename, searchTerms):
     
     is_found = SyslogCheck1._syslog(filename,searchTerms)
     # Found List
