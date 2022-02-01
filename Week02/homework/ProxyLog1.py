@@ -14,7 +14,7 @@ def proxy_events1(filename, service, term):
         sp_results = eachFound.split(" ")
         # Appending the results
         #GET /cgi-bin/welcome HTTP/1.1" 404 435
-        found.append(sp_results[0])
+        found.append(sp_results[0]+ " " + sp_results[2] + "opened with proxy")
         
     # Print  
     getValues = set(found)
