@@ -1,0 +1,28 @@
+shell_attacks:
+
+    winShell: "[GET|POST].*cmd.exe.*"
+
+    nixShell:  "[GET|POST].*/bin/sh.*"
+
+    webShell: "[GET|POST].*c99.php.*"
+---
+SQL_Injection:
+
+    SQL: "[GET|POST].* /phpmyadmin.*"
+
+    MySQL: "[GET|POST].* mysql.*"
+---
+Directory_traversal:
+
+    etc: "[GET|POST].* /etc/passwd.*"
+
+    travel: "[GET|POST].* '\\.\\.'.*"
+---
+Content_Management:
+
+    joomla: "[GET|POST].* joomla.*"
+
+    wordpress: "[GET|POST].* wordpress.*"
+
+    xmlrpc: "[GET|POST].* xmlrpc.*"
+

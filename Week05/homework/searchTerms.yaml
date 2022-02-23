@@ -1,0 +1,86 @@
+Sign:
+
+    Sign: ".*HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\.*"
+
+---
+Script:
+
+mshta: ".*mshta.exe.*"
+
+Files ending with .hta: ".*hta.*"
+
+vbscript: ".*vbscript.*"
+
+about: ".*about.*"
+
+javascript: ".*javascript.*"
+
+regHead: ".*regHead.*"
+
+wscript.Shell: ".*wscript.Shell.*"
+
+cscript : ".*cscript.*"
+
+jscript: ".*jscript.*"
+
+sscript : ".*sscript.*"
+
+Regsvr32 : ".*Regsvr32.*"
+---
+
+Powershell Entries:
+
+Powershell : ".*powershell.exe.*"
+
+powershell:  ".*powershell.*"
+
+ps1: ".*ps1.*"
+
+psm1: ".*psm1.*"
+
+PSLockdownPolicy: ".*PSLockdownPolicy.*"
+
+ExecutionContext.SessionState.LanguageMode: ".*ExecutionContext.SessionState.LanguageMode.*"
+
+Net.WebClient: ".*Net.WebClient.*"
+
+iex: ".*iex.*"
+
+Invoke: ".*Invoke.*"
+
+TOKEN_IMPERSONATE: ".*TOKEN_IMPERSONATE.*"
+
+TOKEN_DUPLICATE: ".*TOKEN_DUPLICATE.*"
+
+TOKEN_ADJUST_PRIVILEGES: ".*TOKEN_ADJUST_PRIVILEGES.*"
+
+TOKEN_PRIVILEGES: ".*TOKEN_PRIVILEGES.*" 
+
+GetDelegateForFunctionPointer: ".*GetDelegateForFunctionPointer.*"
+
+System.Reflection.AssemblyName: ".*System.Reflection.AssemblyName.*"
+
+System.Reflection.Emit.AssemblyBuilderAccess: ".*System.Reflection.Emit.AssemblyBuilderAccess.*"
+
+System.MulticastDelegate: ".*System.MulticastDelegate.*"
+
+System.Reflection.CallingConventions: ".*System.Reflection.CallingConventions.*"
+
+Get-GPPPassword: ".*Get-GPPPassword.*"
+
+System.Security.Cryptography.AesCryptoServiceProvider: ".*System.Security.Cryptography.AesCryptoServiceProvider.*"
+
+0x4e,0x99,0x06,0xe8,0xfc,0xb6,0x6c,0xc9,0xfa,0xf4 :  ".*0x4e,0x99,0x06,0xe8,0xfc,0xb6,0x6c,0xc9,0xfa,0xf4.*"
+
+Groups.User.Properties.cpassword: ".*Groups.User.Properties.cpassword.*"
+
+ScheduledTasks.Task.Properties.cpassword: ".*ScheduledTasks.Task.Properties.cpassword.*"
+
+System.Management.Automation.WindowsErrorReporting: ".*'System.Management.Automation.WindowsErrorReporting'.*"
+
+Out-MiniDump: ".*Out-MiniDump.*"
+
+MiniDumpWriteDump: ".*MiniDumpWriteDump.*"
+
+
+ExecutionPolicyPSRemoting: ".*ExecutionPolicyPSRemoting.*"

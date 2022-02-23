@@ -1,5 +1,5 @@
 # Create and interfaced to search through syslog files
-import yaml, re ,sys 
+import yaml, re, sys
 
 # Open the yaml file
 try:
@@ -10,6 +10,7 @@ except EnvironmentError as e:
     
 
 def _logs(filename,service):
+    
     #Query the yaml file for the 'term' or direction and 
     #retrieve the strings to search on
     keywordLib= keywords[service]
