@@ -2,24 +2,29 @@
 import yaml, re, sys
 
 # Open the yaml file
-try:
-    with open('searchTerms.yaml', 'r') as yf:
-        keywords = yaml.safe_load(yf)
-except EnvironmentError as e:
-    print(e.strerror)
-    
+
 
 def _logs(filename,service):
-    
-    #Query the yaml file for the 'term' or direction and 
-    #retrieve the strings to search on
-    keywordLib= keywords[service]
-    listOfKeywords = []
-    items = keywordLib.items()
-    for item in items:
-        listOfKeywords.append(items[1])
+    with open('searchTerms.yaml', 'r') as yf:
+        contents = yaml.safe_load_all(yf)
+
+        #Query the yaml file for the 'term' or direction and 
+        #retrieve the strings to search on
+        #keywordLib= keywords[service]
+        #Loops through the yaml file and retrieves the documents
+        for keyVal in contents:
+            #print (keyVal)
+            #Retrieves each of the items for each service 
+            for key, value in keyVal[service].items():
+                print (value)
+
+
+        listOfKeywords = []
+        items = keyVal.items()
+        for item in items:
+            listOfKeywords.append(items[1])
     # Open a file
-    with open(filename) as f:
+        with open(filename) as f:
             #read in the file and save it to a variable
                         contents = f.readlines()
 
@@ -45,8 +50,7 @@ def _logs(filename,service):
                             results.append(found)
     # Check to see if there are results
     if len(results) == 0:
-        print("No Results")
-        sys.exit(1)
+        pass
     #Sort the list
     results = sorted(results)
 

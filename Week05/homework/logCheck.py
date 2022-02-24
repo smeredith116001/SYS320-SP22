@@ -2,14 +2,14 @@
 import yaml, re ,sys, csv
 
 # Open the yaml file
-try:
-    with open('searchTerms.yaml', 'r') as yf:
-        keywords = yaml.safe_load(yf)
-except EnvironmentError as e:
-    print(e.strerror)
+
+
     
 
 def _logs(filename,service):
+    
+    with open('searchTerms.yaml', 'r') as yf:
+        keywords = yaml.safe_load(yf)
     
     #Query the yaml file for the 'term' or direction and 
     #retrieve the strings to search on
@@ -39,14 +39,13 @@ def _logs(filename,service):
                         # If the 'line' contains the keyword then it will print
                         # If eachhkeyword is line:
                         # Searches and returns results using a regualr expression search
-                        x = re.findall(''+eachKeyword+'', line [0])
+                        x = re.findall(r''+ eachKeyword + '', line [1])
                         # print(x)    
                         for found in x:
                             results.append(found)
     # Check to see if there are results
     if len(results) == 0:
-        print("No Results")
-        sys.exit(1)
+        pass
     #Sort the list
     results = sorted(results)
 

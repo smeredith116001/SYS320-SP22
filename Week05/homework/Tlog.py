@@ -4,9 +4,9 @@ import importlib
 importlib.reload(logCheck)
 
 
-def proxy_events(filename, service, term):
+def proxy_events(filename, service):
     
-    is_found = logCheck._logs(filename,service,term)
+    is_found = logCheck._logs(filename,service)
     # Found List
     found = []
     #Looping through

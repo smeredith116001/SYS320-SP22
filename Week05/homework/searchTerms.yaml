@@ -1,8 +1,8 @@
+---
 Sign:
 
     Sign: ".*HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\.*"
 
----
 Script:
 
 mshta: ".*mshta.exe.*"
@@ -26,7 +26,6 @@ jscript: ".*jscript.*"
 sscript : ".*sscript.*"
 
 Regsvr32 : ".*Regsvr32.*"
----
 
 Powershell Entries:
 
@@ -44,7 +43,7 @@ ExecutionContext.SessionState.LanguageMode: ".*ExecutionContext.SessionState.Lan
 
 Net.WebClient: ".*Net.WebClient.*"
 
-iex: ".*iex.*"
+iex: ".*iex .*"
 
 Invoke: ".*Invoke.*"
 
