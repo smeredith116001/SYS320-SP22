@@ -18,15 +18,15 @@ def _logs(filename,service):
             for key, value in keyVal[service].items():
                 print (value)
 
-
-        listOfKeywords = []
-        items = keyVal.items()
-        for item in items:
-            listOfKeywords.append(items[1])
+    items = keyVal.items()
+    listOfKeywords = []
+    for item in items:
+        
+        listOfKeywords.append(items[1])
     # Open a file
-        with open(filename) as f:
+    with open(filename) as f:
             #read in the file and save it to a variable
-                        contents = f.readlines()
+            contents = f.readlines()
 
     
     

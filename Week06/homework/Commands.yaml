@@ -1,0 +1,86 @@
+Blind Files
+/etc/resolv.conf	Contains the current name servers (DNS) for the system. This is a globally readable file that is less likely to trigger IDS alerts than /etc/passwd
+/etc/motd	Message of the Day
+/etc/issue	current version of distro
+/etc/passwd	List of local users
+/etc/shadow
+
+System
+
+uname -a	Prints the kernel version, arch, sometimes distro
+ps aux	List all running processes
+top -n 1 -d	Print process, 1 is a number of lines
+id	Your current username, groups
+arch, uname -m
+
+Networking
+
+hostname -f	
+ip addr show	
+ip ro show	
+ifconfig -a	
+route -n
+
+User Accounts
+
+cat /etc/passwd	local accounts
+cat /etc/shadow	password hashes on Linux
+/etc/security/passwd	password hashes on AIX
+cat /etc/group	groups (or /etc/gshadow)
+getent passwd	should dump all local, LDAP, NIS, whatever the system is using
+
+Obtain Users infomation
+
+ls -alh /home/*/
+ls -alh /home/*/.ssh/
+cat /home/*/.ssh/authorized_keys
+cat /home/*/.ssh/known_hosts
+cat /home/*/.hist 
+
+Credentials
+
+/home/*/.ssh/id*	SSH keys, often passwordless
+/tmp/krb5cc_*	Kerberos tickets
+/tmp/krb5.keytab	Kerberos tickets
+/home/*/.gnupg/secring.gpgs	PGP keys
+
+Configs
+
+ls -aRl /etc/ * awk '$1 ~ /w.$/' * grep -v lrwx 2>/dev/nullte
+cat /etc/issue{,.net}
+cat /etc/master.passwd
+cat /etc/group
+cat /etc/hosts
+
+Determine Distro 
+
+uname -a	often hints at it pretty well
+lsb_release -d	Generic command for all LSB distros
+/etc/os-release	Generic for distros using “systemd”
+/etc/issue	Generic but often modified
+cat /etc/*release
+
+Installed Packages
+
+rpm -qa --last | head
+yum list | grep installed
+Debian
+dpkg -l
+dpkg -l | grep -i “linux-image”
+dpkg --get-selections
+Free,Net BSD pkg_info
+Solaris pkginfo
+
+Package Sources
+
+cat /etc/apt/sources.list
+ls -l /etc/yum.repos.d/
+cat /etc/yum.conf
+
+Finding Important Files
+
+ls -dlR */
+ls -alR | grep ^d
+find /var -type d
+ls -dl `find /var -type d`
+ls -dl `find /var -type d` | grep -v root
