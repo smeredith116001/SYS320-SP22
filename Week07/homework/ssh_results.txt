@@ -1,14 +1,14 @@
 ### BEGIN sudo -S ps -ef###
 
 UID          PID    PPID  C STIME TTY          TIME CMD
-root           1       0  0 Feb26 ?        00:00:39 /sbin/init
+root           1       0  0 Feb26 ?        00:00:41 /sbin/init
 root           2       0  0 Feb26 ?        00:00:00 [kthreadd]
 root           3       2  0 Feb26 ?        00:00:00 [rcu_gp]
 root           4       2  0 Feb26 ?        00:00:00 [rcu_par_gp]
 root           6       2  0 Feb26 ?        00:00:00 [kworker/0:0H-kblockd]
 root           8       2  0 Feb26 ?        00:00:00 [mm_percpu_wq]
 root           9       2  0 Feb26 ?        00:00:03 [ksoftirqd/0]
-root          10       2  0 Feb26 ?        00:00:41 [rcu_sched]
+root          10       2  0 Feb26 ?        00:00:42 [rcu_sched]
 root          11       2  0 Feb26 ?        00:00:08 [migration/0]
 root          12       2  0 Feb26 ?        00:00:00 [idle_inject/0]
 root          14       2  0 Feb26 ?        00:00:00 [cpuhp/0]
@@ -44,7 +44,7 @@ root          92       2  0 Feb26 ?        00:00:00 [ipv6_addrconf]
 root         102       2  0 Feb26 ?        00:00:00 [kstrp]
 root         105       2  0 Feb26 ?        00:00:00 [kworker/u3:0]
 root         118       2  0 Feb26 ?        00:00:00 [charger_manager]
-root         160       2  0 Feb26 ?        00:00:07 [kworker/0:1H-kblockd]
+root         160       2  0 Feb26 ?        00:00:08 [kworker/0:1H-kblockd]
 root         161       2  0 Feb26 ?        00:00:00 [scsi_eh_2]
 root         162       2  0 Feb26 ?        00:00:00 [scsi_tmf_2]
 root         165       2  0 Feb26 ?        00:00:00 [cryptd]
@@ -57,12 +57,12 @@ root         476       2  0 Feb26 ?        00:00:00 [kaluad]
 root         477       2  0 Feb26 ?        00:00:00 [kmpath_rdacd]
 root         478       2  0 Feb26 ?        00:00:00 [kmpathd]
 root         479       2  0 Feb26 ?        00:00:00 [kmpath_handlerd]
-root         480       1  0 Feb26 ?        00:01:27 /sbin/multipathd -d -s
+root         480       1  0 Feb26 ?        00:01:28 /sbin/multipathd -d -s
 root         491       2  0 Feb26 ?        00:00:00 [loop0]
 root         494       2  0 Feb26 ?        00:00:00 [loop2]
 systemd+     515       1  0 Feb26 ?        00:00:03 /lib/systemd/systemd-timesyncd
-systemd+     595       1  0 Feb26 ?        00:00:02 /lib/systemd/systemd-resolved
-root         706       1  0 Feb26 ?        00:00:26 /usr/lib/accountsservice/accounts-daemon
+systemd+     595       1  0 Feb26 ?        00:00:03 /lib/systemd/systemd-resolved
+root         706       1  0 Feb26 ?        00:00:27 /usr/lib/accountsservice/accounts-daemon
 message+     714       1  0 Feb26 ?        00:00:05 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
 root         720       1  0 Feb26 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
 syslog       723       1  0 Feb26 ?        00:00:01 /usr/sbin/rsyslogd -n -iNONE
@@ -90,44 +90,71 @@ root       16271       2  0 Feb27 ?        00:00:00 [loop5]
 root       23279       2  0 Feb28 ?        00:00:00 [xfsalloc]
 root       23280       2  0 Feb28 ?        00:00:00 [xfs_mru_cache]
 uuidd      24811       1  0 Feb28 ?        00:00:00 /usr/sbin/uuidd --socket-activation
-root       25680       1  0 Feb28 ?        00:01:14 /usr/lib/snapd/snapd
+root       25680       1  0 Feb28 ?        00:01:15 /usr/lib/snapd/snapd
 root       34879       1  0 Mar02 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
 systemd+   36633       1  0 Mar02 ?        00:00:06 /lib/systemd/systemd-networkd
 root       38803       1  0 Mar02 ?        00:00:00 /usr/sbin/oddjobd -n -p /var/run/oddjobd.pid -t 300
 root       40152       1  0 Mar02 ?        00:00:00 /opt/pbis/sbin/lwsmd --start-as-daemon
-root       40160   40152  0 Mar02 ?        00:01:41 lw-container lwreg
+root       40160   40152  0 Mar02 ?        00:01:59 lw-container lwreg
 root       40188   40152  0 Mar02 ?        00:00:01 lw-container eventlog
-root       40200   40152  0 Mar02 ?        00:00:11 lw-container netlogon
+root       40200   40152  0 Mar02 ?        00:00:12 lw-container netlogon
 root       40210   40152  0 Mar02 ?        00:00:00 lw-container lwio
-root       40223   40152  0 Mar02 ?        00:02:49 lw-container lsass
+root       40223   40152  0 Mar02 ?        00:03:15 lw-container lsass
 root       40237   40152  0 Mar02 ?        00:00:00 lw-container reapsysl
 root       40406       1  0 Mar02 ?        00:00:01 /usr/sbin/cron -f
 root       40420       1  0 Mar02 ?        00:00:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
 root      145792   40420  0 08:21 ?        00:00:00 sshd: ubuntu [priv]
 ubuntu    145807       1  0 08:21 ?        00:00:00 /lib/systemd/systemd --user
-root      145808       2  0 08:21 ?        00:00:06 [kworker/0:1-events]
+root      145808       2  0 08:21 ?        00:00:09 [kworker/0:1-events]
 ubuntu    145817  145807  0 08:21 ?        00:00:00 (sd-pam)
 ubuntu    145915  145792  0 08:21 ?        00:00:00 sshd: ubuntu@pts/0
 ubuntu    145916  145915  0 08:21 pts/0    00:00:00 bash
 root      146326  145916  0 09:21 pts/0    00:00:00 sudo su -
 root      146331  146326  0 09:21 pts/0    00:00:00 su -
 root      146332  146331  0 09:21 pts/0    00:00:00 -bash
-root      147688       2  0 12:05 ?        00:00:00 [kworker/u2:0-events_freezable_power_]
-root      148374       2  0 12:53 ?        00:00:00 [kworker/0:2-cgroup_destroy]
 p.dalton  148658       1  0 13:15 ?        00:00:00 [go-daemon sample]
-root      149270   40420  0 13:26 ?        00:00:00 sshd: christopher.mchugh [priv]
-christo+  149343  149270  0 13:26 ?        00:00:00 sshd: christopher.mchugh@notty
-root      149563   40420  0 13:32 ?        00:00:00 sshd: michael.pinelli [priv]
-michael+  149642  149563  0 13:32 ?        00:00:01 sshd: michael.pinelli@notty
-root      152305       2  0 13:58 ?        00:00:00 [kworker/u2:2-events_power_efficient]
-root      153430   40420  0 14:08 ?        00:00:00 sshd: asani.vessup [priv]
-asani.v+  153506  153430  0 14:08 ?        00:00:00 sshd: asani.vessup@notty
-christo+  153817  149343  0 14:12 ?        00:00:00 /usr/lib/openssh/sftp-server
-root      154216   40420  0 14:17 ?        00:00:00 sshd: sebastian.meredith [priv]
-sebasti+  154294  154216  4 14:17 ?        00:00:00 sshd: sebastian.meredith@notty
-sebasti+  154295  154294  1 14:17 ?        00:00:00 /usr/lib/openssh/sftp-server
-root      154296  154294  0 14:18 ?        00:00:00 sudo -S ps -ef
-root      154297  154296  0 14:18 ?        00:00:00 ps -ef
+root      161038       2  0 17:00 ?        00:00:00 [kworker/u2:1-events_power_efficient]
+root      161425       2  0 17:08 ?        00:00:00 [kworker/0:0-cgroup_destroy]
+root      161689   40420  0 17:13 ?        00:00:00 sshd: jack.leonard [priv]
+jack.le+  161762  161689  0 17:13 ?        00:00:00 sshd: jack.leonard@notty
+jack.le+  161763  161762  0 17:13 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      162133   40420  0 17:19 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  162214  162133  0 17:19 ?        00:00:00 sshd: christopher.mchugh@notty
+root      162406   40420  0 17:23 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  162479  162406  0 17:23 ?        00:00:00 sshd: christopher.mchugh@notty
+root      162652   40420  0 17:26 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  162725  162652  0 17:26 ?        00:00:00 sshd: christopher.mchugh@notty
+root      163003   40420  0 17:31 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  163076  163003  0 17:31 ?        00:00:00 sshd: christopher.mchugh@notty
+root      163233       2  0 17:32 ?        00:00:00 [kworker/u2:0-events_power_efficient]
+root      163330   40420  0 17:35 ?        00:00:00 sshd: sebastian.meredith [priv]
+sebasti+  163411  163330  0 17:35 ?        00:00:00 sshd: sebastian.meredith@notty
+sebasti+  163412  163411  0 17:35 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      163535   40420  0 17:37 ?        00:00:00 sshd: sebastian.meredith [priv]
+sebasti+  163608  163535  0 17:37 ?        00:00:00 sshd: sebastian.meredith@notty
+sebasti+  163609  163608  0 17:37 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      163748   40420  0 17:39 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  163819  163748  0 17:39 ?        00:00:00 sshd: christopher.mchugh@notty
+root      163823   40420  0 17:39 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  163896  163823  0 17:39 ?        00:00:00 sshd: christopher.mchugh@notty
+root      163901   40420  0 17:40 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  163974  163901  0 17:40 ?        00:00:00 sshd: christopher.mchugh@notty
+christo+  163978  163974  0 17:40 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      164074   40420  0 17:41 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  164147  164074  0 17:41 ?        00:00:00 sshd: christopher.mchugh@notty
+root      164151   40420  0 17:43 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  164231  164151  0 17:43 ?        00:00:00 sshd: christopher.mchugh@notty
+root      164237       2  0 17:44 ?        00:00:00 [kworker/u2:2-events_freezable_power_]
+root      164243   40420  0 17:44 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  164316  164243  0 17:44 ?        00:00:00 sshd: christopher.mchugh@notty
+root      164422   40420  0 17:46 ?        00:00:00 sshd: christopher.mchugh [priv]
+christo+  164501  164422  0 17:46 ?        00:00:00 sshd: christopher.mchugh@notty
+christo+  164502  164501  0 17:46 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      164509   40420  3 17:47 ?        00:00:00 sshd: sebastian.meredith [priv]
+sebasti+  164582  164509  0 17:47 ?        00:00:00 sshd: sebastian.meredith@notty
+sebasti+  164583  164582  0 17:47 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      164584  164582  0 17:47 ?        00:00:00 sudo -S ps -ef
+root      164585  164584  0 17:47 ?        00:00:00 ps -ef
 ### END sudo -S ps -ef###
 
 ### BEGIN sudo -S /home/ubuntu/kraken --folder /usr/bin --folder  --folder /usr/sbin/   --folder /usr/local/bin  --folder /sbin  --folder /usr/local/sbin  --folder /bin###
@@ -137,16 +164,16 @@ root      154297  154296  0 14:18 ?        00:00:00 ps -ef
 [36mINFO[0m[0000] Loading Yara rules...                        
 [36mINFO[0m[0000] Scanning running processes...                
 [33mWARN[0m[0004] DETECTION! Malicious process detected as foundGoBinary  [33mpid[0m=25680 [33mprocess[0m=snapd
-[33mWARN[0m[0015] DETECTION! Malicious process detected as foundGoBinary  [33mpid[0m=148658 [33mprocess[0m=ls
-[36mINFO[0m[0015] Scanning autoruns...                         
-[33mWARN[0m[0016] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
-[33mWARN[0m[0016] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
-[36mINFO[0m[0016] Scanning the filesystem (this can take several minutes)... 
-[31mERRO[0m[0016] Some malicious artifacts have been detected on this system: 
-[31mERRO[0m[0016] Found detection for foundGoBinary            
-[31mERRO[0m[0016] Found detection for foundGoBinary            
-[31mERRO[0m[0016] Found detection for foundGoBinary            
-[31mERRO[0m[0016] Found detection for foundGoBinary            
+[33mWARN[0m[0014] DETECTION! Malicious process detected as foundGoBinary  [33mpid[0m=148658 [33mprocess[0m=ls
+[36mINFO[0m[0016] Scanning autoruns...                         
+[33mWARN[0m[0017] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
+[33mWARN[0m[0017] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
+[36mINFO[0m[0017] Scanning the filesystem (this can take several minutes)... 
+[31mERRO[0m[0017] Some malicious artifacts have been detected on this system: 
+[31mERRO[0m[0017] Found detection for foundGoBinary            
+[31mERRO[0m[0017] Found detection for foundGoBinary            
+[31mERRO[0m[0017] Found detection for foundGoBinary            
+[31mERRO[0m[0017] Found detection for foundGoBinary            
 ### END sudo -S /home/ubuntu/kraken --folder /usr/bin --folder  --folder /usr/sbin/   --folder /usr/local/bin  --folder /sbin  --folder /usr/local/sbin  --folder /bin###
 
 ### BEGIN sudo -S lsof -p 148658###
@@ -169,51 +196,16 @@ ls      148658 p.dalton    8r     FIFO   0,13      0t0 959367 pipe
 ls      148658 p.dalton    9w     FIFO   0,13      0t0 959367 pipe
 ### END sudo -S lsof -p 148658###
 
-### BEGIN sudo -S lsof -i :22###
+### BEGIN sudo -S lsof -i :8080###
 
-COMMAND    PID               USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
-sshd     40420               root    3u  IPv4  181390      0t0  TCP *:ssh (LISTEN)
-sshd     40420               root    4u  IPv6  181392      0t0  TCP *:ssh (LISTEN)
-sshd    145792               root    4u  IPv4  944406      0t0  TCP sys320:ssh->_gateway:50918 (ESTABLISHED)
-sshd    145915             ubuntu    4u  IPv4  944406      0t0  TCP sys320:ssh->_gateway:50918 (ESTABLISHED)
-sshd    149270               root    4u  IPv4  965021      0t0  TCP sys320:ssh->192.168.6.73:64598 (ESTABLISHED)
-sshd    149343 christopher.mchugh    4u  IPv4  965021      0t0  TCP sys320:ssh->192.168.6.73:64598 (ESTABLISHED)
-sshd    149563               root    4u  IPv4  968279      0t0  TCP sys320:ssh->stu-67-155-171-184.champlain.edu:52114 (ESTABLISHED)
-sshd    149642    michael.pinelli    4u  IPv4  968279      0t0  TCP sys320:ssh->stu-67-155-171-184.champlain.edu:52114 (ESTABLISHED)
-sshd    153430               root    4u  IPv4 1018537      0t0  TCP sys320:ssh->192.168.6.73:49272 (ESTABLISHED)
-sshd    153506       asani.vessup    4u  IPv4 1018537      0t0  TCP sys320:ssh->192.168.6.73:49272 (ESTABLISHED)
-sshd    154216               root    4u  IPv4 1035011      0t0  TCP sys320:ssh->192.168.6.73:49611 (ESTABLISHED)
-sshd    154294 sebastian.meredith    4u  IPv4 1035011      0t0  TCP sys320:ssh->192.168.6.73:49611 (ESTABLISHED)
-### END sudo -S lsof -i :22###
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+ls      148658 p.dalton    5u  IPv6 959366      0t0  TCP *:http-alt (LISTEN)
+### END sudo -S lsof -i :8080###
 
-### BEGIN sudo -S lsof -p 25680###
+### BEGIN sudo -S grep p.dalton /etc/passwd###
 
-COMMAND   PID USER   FD      TYPE             DEVICE SIZE/OFF   NODE NAME
-snapd   25680 root  cwd       DIR                8,1     4096      2 /
-snapd   25680 root  rtd       DIR                8,1     4096      2 /
-snapd   25680 root  txt       REG                8,1 30955760  16810 /usr/lib/snapd/snapd
-snapd   25680 root  DEL       REG                8,1            3467 /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
-snapd   25680 root  DEL       REG                8,1            3460 /usr/lib/x86_64-linux-gnu/libnss_dns-2.31.so
-snapd   25680 root  DEL       REG                8,1            3461 /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
-snapd   25680 root  DEL       REG                8,1            3453 /usr/lib/x86_64-linux-gnu/libc-2.31.so
-snapd   25680 root  DEL       REG                8,1            3466 /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
-snapd   25680 root  DEL       REG                8,1            3449 /usr/lib/x86_64-linux-gnu/ld-2.31.so
-snapd   25680 root    0r      CHR                1,3      0t0      6 /dev/null
-snapd   25680 root    1u     unix 0xffff89caeb601c00      0t0 120340 type=STREAM
-snapd   25680 root    2u     unix 0xffff89caeb601c00      0t0 120340 type=STREAM
-snapd   25680 root    3u     unix 0xffff89ca3c94c800      0t0 120744 type=STREAM
-snapd   25680 root    5u     unix 0xffff89ca41db5000      0t0 120154 /run/snapd.socket type=STREAM
-snapd   25680 root    6u  a_inode               0,14        0  10376 [eventpoll]
-snapd   25680 root    7u     unix 0xffff89ca41db5400      0t0 120155 /run/snapd-snap.socket type=STREAM
-snapd   25680 root    8u  netlink                         0t0 121049 KOBJECT_UEVENT
-snapd   25680 root    9r     FIFO               0,13      0t0 121050 pipe
-snapd   25680 root   10w     FIFO               0,13      0t0 121050 pipe
-### END sudo -S lsof -p 25680###
-
-### BEGIN sudo -S grep ssh /etc/passwd###
-
-sshd:x:109:65534::/run/sshd:/usr/sbin/nologin
-### END sudo -S grep ssh /etc/passwd###
+p.dalton:x:1001:1001::/home/p.dalton:/bin/bash
+### END sudo -S grep p.dalton /etc/passwd###
 
 ### BEGIN sudo -S last p.dalton###
 
@@ -224,12 +216,12 @@ p.dalton pts/1        10.223.0.132     Sat Feb 26 23:44 - 23:44  (00:00)
 wtmp begins Sat Feb 26 23:26:55 2022
 ### END sudo -S last p.dalton###
 
-### BEGIN grep ssh /etc/services###
+### BEGIN grep http-alt /etc/services###
 
-ssh		22/tcp				# SSH Remote Login Protocol
-### END grep ssh /etc/services###
+http-alt	8080/tcp	webcache	# WWW caching service
+### END grep http-alt /etc/services###
 
-### BEGIN sudo -S grep ssh /home###
+### BEGIN python3 download.py -d /home/p.dalton###
 
-### END sudo -S grep ssh /home###
+### END python3 download.py -d /home/p.dalton###
 
