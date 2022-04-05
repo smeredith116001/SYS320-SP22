@@ -1,0 +1,199 @@
+### BEGIN sudo -S ps -ef###
+
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 Feb26 ?        00:00:41 /sbin/init
+root           2       0  0 Feb26 ?        00:00:00 [kthreadd]
+root           3       2  0 Feb26 ?        00:00:00 [rcu_gp]
+root           4       2  0 Feb26 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 Feb26 ?        00:00:00 [kworker/0:0H-kblockd]
+root           8       2  0 Feb26 ?        00:00:00 [mm_percpu_wq]
+root           9       2  0 Feb26 ?        00:00:03 [ksoftirqd/0]
+root          10       2  0 Feb26 ?        00:00:42 [rcu_sched]
+root          11       2  0 Feb26 ?        00:00:08 [migration/0]
+root          12       2  0 Feb26 ?        00:00:00 [idle_inject/0]
+root          14       2  0 Feb26 ?        00:00:00 [cpuhp/0]
+root          15       2  0 Feb26 ?        00:00:00 [kdevtmpfs]
+root          16       2  0 Feb26 ?        00:00:00 [netns]
+root          17       2  0 Feb26 ?        00:00:00 [rcu_tasks_kthre]
+root          18       2  0 Feb26 ?        00:00:00 [kauditd]
+root          19       2  0 Feb26 ?        00:00:00 [khungtaskd]
+root          20       2  0 Feb26 ?        00:00:00 [oom_reaper]
+root          21       2  0 Feb26 ?        00:00:00 [writeback]
+root          22       2  0 Feb26 ?        00:00:00 [kcompactd0]
+root          23       2  0 Feb26 ?        00:00:00 [ksmd]
+root          24       2  0 Feb26 ?        00:00:00 [khugepaged]
+root          70       2  0 Feb26 ?        00:00:00 [kintegrityd]
+root          71       2  0 Feb26 ?        00:00:00 [kblockd]
+root          72       2  0 Feb26 ?        00:00:00 [blkcg_punt_bio]
+root          73       2  0 Feb26 ?        00:00:00 [tpm_dev_wq]
+root          74       2  0 Feb26 ?        00:00:00 [ata_sff]
+root          75       2  0 Feb26 ?        00:00:00 [md]
+root          76       2  0 Feb26 ?        00:00:00 [edac-poller]
+root          77       2  0 Feb26 ?        00:00:00 [devfreq_wq]
+root          78       2  0 Feb26 ?        00:00:00 [watchdogd]
+root          81       2  0 Feb26 ?        00:00:00 [kswapd0]
+root          82       2  0 Feb26 ?        00:00:00 [ecryptfs-kthrea]
+root          84       2  0 Feb26 ?        00:00:00 [kthrotld]
+root          85       2  0 Feb26 ?        00:00:00 [acpi_thermal_pm]
+root          86       2  0 Feb26 ?        00:00:00 [scsi_eh_0]
+root          87       2  0 Feb26 ?        00:00:00 [scsi_tmf_0]
+root          88       2  0 Feb26 ?        00:00:00 [scsi_eh_1]
+root          89       2  0 Feb26 ?        00:00:00 [scsi_tmf_1]
+root          91       2  0 Feb26 ?        00:00:00 [vfio-irqfd-clea]
+root          92       2  0 Feb26 ?        00:00:00 [ipv6_addrconf]
+root         102       2  0 Feb26 ?        00:00:00 [kstrp]
+root         105       2  0 Feb26 ?        00:00:00 [kworker/u3:0]
+root         118       2  0 Feb26 ?        00:00:00 [charger_manager]
+root         160       2  0 Feb26 ?        00:00:08 [kworker/0:1H-kblockd]
+root         161       2  0 Feb26 ?        00:00:00 [scsi_eh_2]
+root         162       2  0 Feb26 ?        00:00:00 [scsi_tmf_2]
+root         165       2  0 Feb26 ?        00:00:00 [cryptd]
+root         232       2  0 Feb26 ?        00:00:00 [raid5wq]
+root         272       2  0 Feb26 ?        00:00:03 [jbd2/sda1-8]
+root         273       2  0 Feb26 ?        00:00:00 [ext4-rsv-conver]
+root         345       1  0 Feb26 ?        00:00:08 /lib/systemd/systemd-journald
+root         377       1  0 Feb26 ?        00:00:06 /lib/systemd/systemd-udevd
+root         476       2  0 Feb26 ?        00:00:00 [kaluad]
+root         477       2  0 Feb26 ?        00:00:00 [kmpath_rdacd]
+root         478       2  0 Feb26 ?        00:00:00 [kmpathd]
+root         479       2  0 Feb26 ?        00:00:00 [kmpath_handlerd]
+root         480       1  0 Feb26 ?        00:01:29 /sbin/multipathd -d -s
+root         491       2  0 Feb26 ?        00:00:00 [loop0]
+root         494       2  0 Feb26 ?        00:00:00 [loop2]
+systemd+     515       1  0 Feb26 ?        00:00:03 /lib/systemd/systemd-timesyncd
+systemd+     595       1  0 Feb26 ?        00:00:03 /lib/systemd/systemd-resolved
+root         706       1  0 Feb26 ?        00:00:27 /usr/lib/accountsservice/accounts-daemon
+message+     714       1  0 Feb26 ?        00:00:05 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         720       1  0 Feb26 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog       723       1  0 Feb26 ?        00:00:01 /usr/sbin/rsyslogd -n -iNONE
+root         725       1  0 Feb26 ?        00:00:05 /lib/systemd/systemd-logind
+root         727       1  0 Feb26 ?        00:00:01 /usr/lib/udisks2/udisksd
+daemon       728       1  0 Feb26 ?        00:00:00 /usr/sbin/atd -f
+root         771       1  0 Feb26 ttyS0    00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+root         775       1  0 Feb26 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         789       1  0 Feb26 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        3363       2  0 Feb26 ?        00:00:00 [spl_system_task]
+root        3364       2  0 Feb26 ?        00:00:00 [spl_delay_taskq]
+root        3365       2  0 Feb26 ?        00:00:00 [spl_dynamic_tas]
+root        3366       2  0 Feb26 ?        00:00:00 [spl_kmem_cache]
+root        3395       2  0 Feb26 ?        00:00:00 [zvol]
+root        3396       2  0 Feb26 ?        00:00:00 [arc_prune]
+root        3397       2  0 Feb26 ?        00:00:00 [zthr_procedure]
+root        3398       2  0 Feb26 ?        00:00:29 [zthr_procedure]
+root        3399       2  0 Feb26 ?        00:00:00 [dbu_evict]
+root        3400       2  0 Feb26 ?        00:00:28 [dbuf_evict]
+root        3401       2  0 Feb26 ?        00:00:00 [z_vdev_file]
+root        3402       2  0 Feb26 ?        00:00:22 [l2arc_feed]
+root       15949       2  0 Feb27 ?        00:00:00 [loop3]
+root       16031       2  0 Feb27 ?        00:00:00 [loop4]
+root       16271       2  0 Feb27 ?        00:00:00 [loop5]
+root       23279       2  0 Feb28 ?        00:00:00 [xfsalloc]
+root       23280       2  0 Feb28 ?        00:00:00 [xfs_mru_cache]
+uuidd      24811       1  0 Feb28 ?        00:00:00 /usr/sbin/uuidd --socket-activation
+root       25680       1  0 Feb28 ?        00:01:16 /usr/lib/snapd/snapd
+root       34879       1  0 Mar02 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+systemd+   36633       1  0 Mar02 ?        00:00:06 /lib/systemd/systemd-networkd
+root       38803       1  0 Mar02 ?        00:00:00 /usr/sbin/oddjobd -n -p /var/run/oddjobd.pid -t 300
+root       40152       1  0 Mar02 ?        00:00:00 /opt/pbis/sbin/lwsmd --start-as-daemon
+root       40160   40152  0 Mar02 ?        00:02:00 lw-container lwreg
+root       40188   40152  0 Mar02 ?        00:00:01 lw-container eventlog
+root       40200   40152  0 Mar02 ?        00:00:12 lw-container netlogon
+root       40210   40152  0 Mar02 ?        00:00:00 lw-container lwio
+root       40223   40152  0 Mar02 ?        00:03:17 lw-container lsass
+root       40237   40152  0 Mar02 ?        00:00:00 lw-container reapsysl
+root       40406       1  0 Mar02 ?        00:00:01 /usr/sbin/cron -f
+root       40420       1  0 Mar02 ?        00:00:01 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root      145792   40420  0 08:21 ?        00:00:00 sshd: ubuntu [priv]
+ubuntu    145807       1  0 08:21 ?        00:00:00 /lib/systemd/systemd --user
+root      145808       2  0 08:21 ?        00:00:11 [kworker/0:1-mm_percpu_wq]
+ubuntu    145817  145807  0 08:21 ?        00:00:00 (sd-pam)
+ubuntu    145915  145792  0 08:21 ?        00:00:00 sshd: ubuntu@pts/0
+ubuntu    145916  145915  0 08:21 pts/0    00:00:00 bash
+root      146326  145916  0 09:21 pts/0    00:00:00 sudo su -
+root      146331  146326  0 09:21 pts/0    00:00:00 su -
+root      146332  146331  0 09:21 pts/0    00:00:00 -bash
+p.dalton  148658       1  0 13:15 ?        00:00:00 [go-daemon sample]
+root      161425       2  0 17:08 ?        00:00:00 [kworker/0:0-cgroup_destroy]
+root      165005       2  0 19:02 ?        00:00:00 [kworker/u2:1-events_power_efficient]
+root      165034       2  0 19:15 ?        00:00:00 [kworker/u2:0-events_power_efficient]
+root      165056       2  0 19:21 ?        00:00:00 [kworker/u2:2-events_freezable_power_]
+root      165252   40420  1 19:49 ?        00:00:00 sshd: sebastian.meredith [priv]
+sebasti+  165332  165252  0 19:49 ?        00:00:00 sshd: sebastian.meredith@notty
+sebasti+  165333  165332  0 19:49 ?        00:00:00 /usr/lib/openssh/sftp-server
+root      165334  165332  1 19:49 ?        00:00:00 sudo -S ps -ef
+root      165335  165334  0 19:49 ?        00:00:00 ps -ef
+### END sudo -S ps -ef###
+
+### BEGIN sudo -S /home/ubuntu/kraken --folder /usr/bin --folder  --folder /usr/sbin/   --folder /usr/local/bin  --folder /sbin  --folder /usr/local/sbin  --folder /bin###
+
+[36mINFO[0m[0000] Looking for configuration file with name config.yaml 
+[36mINFO[0m[0000] No configuration file found, generating a default one... 
+[36mINFO[0m[0000] Loading Yara rules...                        
+[36mINFO[0m[0000] Scanning running processes...                
+[33mWARN[0m[0004] DETECTION! Malicious process detected as foundGoBinary  [33mpid[0m=25680 [33mprocess[0m=snapd
+[33mWARN[0m[0014] DETECTION! Malicious process detected as foundGoBinary  [33mpid[0m=148658 [33mprocess[0m=ls
+[36mINFO[0m[0015] Scanning autoruns...                         
+[33mWARN[0m[0015] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
+[33mWARN[0m[0016] DETECTION! Malicious autorun detected as foundGoBinary  [33mimage_path[0m=/usr/bin/snap [33mtype[0m=systemd
+[36mINFO[0m[0016] Scanning the filesystem (this can take several minutes)... 
+[31mERRO[0m[0016] Some malicious artifacts have been detected on this system: 
+[31mERRO[0m[0016] Found detection for foundGoBinary            
+[31mERRO[0m[0016] Found detection for foundGoBinary            
+[31mERRO[0m[0016] Found detection for foundGoBinary            
+[31mERRO[0m[0016] Found detection for foundGoBinary            
+### END sudo -S /home/ubuntu/kraken --folder /usr/bin --folder  --folder /usr/sbin/   --folder /usr/local/bin  --folder /sbin  --folder /usr/local/sbin  --folder /bin###
+
+### BEGIN sudo -S lsof -p 148658###
+
+COMMAND    PID     USER   FD      TYPE DEVICE SIZE/OFF   NODE NAME
+ls      148658 p.dalton  cwd       DIR    8,1     4096 258069 /home/p.dalton
+ls      148658 p.dalton  rtd       DIR    8,1     4096      2 /
+ls      148658 p.dalton  txt       REG    8,1  6597697 258133 /usr/local/bin/ls
+ls      148658 p.dalton  mem       REG    8,1  2029560   2575 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+ls      148658 p.dalton  mem       REG    8,1   157224  20034 /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+ls      148658 p.dalton  mem       REG    8,1   191472   2570 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+ls      148658 p.dalton    0r      CHR    1,3      0t0      6 /dev/null
+ls      148658 p.dalton    1w      REG    8,1      765 258258 /home/p.dalton/.d.log
+ls      148658 p.dalton    2w      REG    8,1      765 258258 /home/p.dalton/.d.log
+ls      148658 p.dalton    3r      CHR    1,3      0t0      6 /dev/null
+ls      148658 p.dalton    4u      REG    8,1        6 258299 /home/p.dalton/d.pid
+ls      148658 p.dalton    5u     IPv6 959366      0t0    TCP *:http-alt (LISTEN)
+ls      148658 p.dalton    7u  a_inode   0,14        0  10376 [eventpoll]
+ls      148658 p.dalton    8r     FIFO   0,13      0t0 959367 pipe
+ls      148658 p.dalton    9w     FIFO   0,13      0t0 959367 pipe
+### END sudo -S lsof -p 148658###
+
+### BEGIN sudo -S lsof -i :8080###
+
+COMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+ls      148658 p.dalton    5u  IPv6 959366      0t0  TCP *:http-alt (LISTEN)
+### END sudo -S lsof -i :8080###
+
+### BEGIN sudo -S grep p.dalton /etc/passwd###
+
+p.dalton:x:1001:1001::/home/p.dalton:/bin/bash
+### END sudo -S grep p.dalton /etc/passwd###
+
+### BEGIN sudo -S last p.dalton###
+
+p.dalton pts/0        192.168.6.72     Sun Feb 27 00:52 - 01:17  (00:24)
+p.dalton pts/1        10.223.0.132     Sat Feb 26 23:50 - 00:27  (00:36)
+p.dalton pts/1        10.223.0.132     Sat Feb 26 23:44 - 23:44  (00:00)
+
+wtmp begins Sat Feb 26 23:26:55 2022
+### END sudo -S last p.dalton###
+
+### BEGIN grep http-alt /etc/services###
+
+http-alt	8080/tcp	webcache	# WWW caching service
+### END grep http-alt /etc/services###
+
+### BEGIN python3 download.py -d /home/p.dalton###
+
+### END python3 download.py -d /home/p.dalton###
+
+### BEGIN sudo -S dir /home/p.dalton###
+
+aqwerpuqwerj  d.pid  test-lk
+### END sudo -S dir /home/p.dalton###
+
