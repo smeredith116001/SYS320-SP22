@@ -16,11 +16,11 @@ def _logs(filename,service):
             #print (keyVal)
             #Retrieves each of the items for each service 
             for key, value in keyVal[service].items():
-                print (value)
+                        listOfKeywords = []
+                        items = keyVal.items()
 
 
-        listOfKeywords = []
-        items = keyVal.items()
+
         for item in items:
             listOfKeywords.append(items[1])
     # Open a file
