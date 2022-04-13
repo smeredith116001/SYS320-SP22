@@ -19,10 +19,6 @@ switch ($var) {
         }
 
         $input_path = ".\emerging-botcc.rules"
-
-        # Extract the IP addresses
-        # 108.190.109.107
-        # 108.191.2.72
         $regex_drop = '\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b'
 
         # Append the Ip addresses to the temporary IP list
@@ -31,7 +27,7 @@ switch ($var) {
         ForEach-Object { $_.Value } | Sort-Object | Get-Unique | `
         Out-File -FilePath ".\emerging-botcc.tmp"
 
-        # Get the IP addresses discovered, loop through and replace the beginning of the line with teh IPTables syntax
+        # Get the IP addresses discovered, loop through and replace the beginning of the line with the IPTables syntax
         # After the IP address, add the remaining IPTables syntax and save the results to a file
         # iptables -A INPUT -s 108.191.2.72 -j DROP
         (Get-Content -Path ".\emerging-botcc.tmp") | % `
@@ -69,7 +65,7 @@ switch ($var) {
         ForEach-Object { $_.Value } | Sort-Object | Get-Unique | `
         Out-File -FilePath ".\compromised-ips.tmp"
 
-        # Get the IP addresses discovered, loop through and replace the beginning of the line with teh IPTables syntax
+        # Get the IP addresses discovered, loop through and replace the beginning of the line with the IPTables syntax
         # After the IP address, add the remaining IPTables syntax and save the results to a file
         # iptables -A INPUT -s 108.191.2.72 -j DROP
         (Get-Content -Path ".\compromised-ips.tmp") | % `
